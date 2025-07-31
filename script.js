@@ -1,14 +1,14 @@
 function calcular(){
-   
-    let capital = perseInt(document.getElementById('capital').value);
-    let taxa = perseInt(document.getElementById('taxa').value);
-    let tempo = perseInt(document.getElementById('tempo').value);
-   
-    let porcentagen_do_juros = taxa/100;
-    let juros = capital * porcentagen_do_juros * tempo;
-    let montante = juros + capital;
-    
-    document.getElementById('resultado').textContent = 'resultado:' + montante;
+      
+    let capital_inicial = parseInt(document.getElementById('capital_inicial').value);
+    let taxa = parseInt(document.getElementById('taxa').value);
+    let tempo = parseInt(document.getElementById('tempo').value);
 
+    let porcentagem_de_juro = taxa/100;
+    let juros = capital_inicial * porcentagem_de_juro * tempo;
+    let montante = juros + capital_inicial;
+
+    document.getElementById('Resultado_juros').textContent = "Juros: " + juros;
+    document.getElementById('Resultado_montante').textContent = "Montante: " + montante;
 
 }
